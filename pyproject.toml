@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edge_grasp_network"
+version = "0.0.1"
+dependencies = [
+    "numpy<2",
+    "pybullet",
+]
+
+[tool.setuptools]
+packages = ["edge_grasp_network"]

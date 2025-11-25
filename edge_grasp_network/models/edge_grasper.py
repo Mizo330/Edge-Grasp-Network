@@ -5,7 +5,7 @@ file_dir = os.path.dirname(__file__)
 sys.path.append(file_dir)
 #sys.path.append('..')
 from dataset_processor import Grasp_Dataset, GraspNormalization, GraspAugmentation, PreTransformBallBox
-from edge_grasp_network import EdgeGrasp
+from .edge_grasp_network import EdgeGrasp
 import torch
 from utils import write_test,write_training
 import argparse

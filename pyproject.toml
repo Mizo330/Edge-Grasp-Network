@@ -1,14 +1,17 @@
 [build-system]
-requires = ["setuptools>=61.0.0"]
+requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "edge_grasp_network"
 version = "0.0.1"
+requires-python = ">=3.8"
 dependencies = [
     "numpy<2",
     "pybullet",
 ]
 
-[tool.setuptools]
-packages = ["edge_grasp_network"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["edge_grasp_network*"] 
+exclude = ["vn_edge_pretrained_para", "edge_grasp_net_pretrained_para", "data_robot", "image"]

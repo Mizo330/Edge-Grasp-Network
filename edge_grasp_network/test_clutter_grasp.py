@@ -4,11 +4,11 @@ from pathlib import Path
 import numpy
 import numpy as np
 import open3d as o3d
-from simulator.grasp import Grasp, Label
-from simulator.simulation_clutter_bandit import ClutterRemovalSim
-from simulator.transform import Rotation, Transform
-from simulator.io_smi import *
-from simulator.utility import FarthestSamplerTorch, get_gripper_points_mask, orthognal_grasps, FarthestSampler
+from .simulator.grasp import Grasp, Label
+from .simulator.simulation_clutter_bandit import ClutterRemovalSim
+from .simulator.transform import Rotation, Transform
+from .simulator.io_smi import *
+from .simulator.utility import FarthestSamplerTorch, get_gripper_points_mask, orthognal_grasps, FarthestSampler
 #from utility import bandit_grasp
 import warnings
 import torch
@@ -17,8 +17,8 @@ import torch.nn.functional as F
 from torch_geometric.data import Data, Batch
 from torch.backends import cudnn
 from termcolor import colored
-from models.edge_grasper import EdgeGrasper
-from models.vn_edge_grasper import EdgeGrasper as VNGrasper
+from .models.edge_grasper import EdgeGrasper
+from .models.vn_edge_grasper import EdgeGrasper as VNGrasper
 import tqdm
 warnings.filterwarnings("ignore")
 # OBJECT_COUNT_LAMBDA = 4

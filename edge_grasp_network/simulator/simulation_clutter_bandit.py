@@ -16,9 +16,9 @@ from scipy.spatial.transform import Slerp
 class ClutterRemovalSim(object):
     def __init__(self, scene, object_set, gui=True, seed=None,rand=False):
         assert scene in ["pile", "packed", "obj", "egad"]
-        self.urdf_root = Path("./data_robot/urdfs")
-        self.obj_root = Path('./data_robot/graspnet_1B_object_test/GraspNet1B_object')
-        self.egad_root = Path(Path('./data_robot/egad_eval_set'))
+        self.urdf_root = Path("../data_robot/urdfs")
+        self.obj_root = Path('../data_robot/graspnet_1B_object_test/GraspNet1B_object')
+        self.egad_root = Path(Path('../data_robot/egad_eval_set'))
         self.scene = scene
         self.object_set = object_set
         # get the list of urdf files or obj files
@@ -443,7 +443,7 @@ class Gripper(object):
     """Simulated Panda hand."""
     def __init__(self, world):
         self.world = world
-        self.urdf_path = Path("./data_robot/urdfs/panda/hand.urdf")
+        self.urdf_path = Path("../data_robot/urdfs/panda/hand.urdf")
 
         self.max_opening_width = 0.08
         self.finger_depth = 0.05

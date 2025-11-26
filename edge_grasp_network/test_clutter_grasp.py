@@ -37,9 +37,9 @@ def main(args):
     else:
         device = torch.device('cpu')
     if args.vn:
-        grasper = VNGrasper(device=args.device, root_dir='./vn_edge_pretrained_para', load=105)
+        grasper = VNGrasper(device=args.device, root_dir='../vn_edge_pretrained_para', load=105)
     else:
-        grasper = EdgeGrasper(device=args.device, root_dir='./edge_grasp_net_pretrained_para', load=180)
+        grasper = EdgeGrasper(device=args.device, root_dir='../edge_grasp_net_pretrained_para', load=180)
 
     sim = ClutterRemovalSim(args.scene, args.object_set, gui=args.sim_gui,rand=args.rand)
     # finger_depth = sim.gripper.finger_depth
